@@ -6,3 +6,30 @@ Author: paraply
 Author URI: http://evinja.se
 Version: 0.1
 */
+
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+
+@media screen and (min-width:768px){
+    body {
+        padding: 20px;
+    }
+    
+    .navbar-brand{
+    width: 140px;
+    text-align: center;
+    }
+    
+} 
+
+.navbar{
+    font-family: 'Raleway';
+}
+
+.navbar-brand{
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 3px rgba(150, 150, 150, 0.15);
+}
+
+.navbar {
+    margin-bottom: 20px;
+}

@@ -1,7 +1,7 @@
 <?php get_header(); ?>
     
 <div class="container">
-    <div class="row">
+     <div class="blog-main">
             <?php if ( have_posts() ) : 
                 while ( have_posts() ) : the_post(); ?> <!-- loop through the posts -->
                     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -21,11 +21,11 @@
                 <?php endwhile; ?> 
                 
                 <?php else : ?>
-                    <h2>No content
+                    <h2>No content</h2>
                 
                 <?php endif; ?>
             
-    </div> <!-- .row -->
+    </div> <!-- .blog-main -->
 </div> <!-- .container -->
             
 <?php get_footer(); ?>
