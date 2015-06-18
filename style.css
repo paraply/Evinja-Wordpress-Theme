@@ -6,30 +6,215 @@ Author: paraply
 Author URI: http://evinja.se
 Version: 0.1
 */
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:300|Roboto:300);
 
-@import url(http://fonts.googleapis.com/css?family=Raleway);
+html,body{
+    padding: 0;
+    margin: 0;
+     background-color: #E6E6E6;
+}
+
+::selection {
+  background: #75A64B;
+}
+
 
 @media screen and (min-width:768px){
-    body {
-        padding: 20px;
-    }
-    
-    .navbar-brand{
-    width: 140px;
-    text-align: center;
-    }
-    
-} 
-
-.navbar{
-    font-family: 'Raleway';
+    body:before {
+          content: "";
+          position: fixed;
+          top: -5px;
+          left: 0;
+          width: 100%;
+          background-color: #75a64b;
+          height: 10px;
+          box-shadow: 0px 0px 10px rgba(0,0,0,.4);
 }
 
-.navbar-brand{
-    letter-spacing: 1px;
-    text-shadow: 1px 1px 3px rgba(150, 150, 150, 0.15);
+    #side{
+        padding-top:45px;
+        width:280px;
+        height:100%;
+        position: fixed;
+        text-align: center;
+        z-index: -1;
+    }
+    
+    #main{
+        float:right;
+        width: calc(100% - 421px); 
+        padding:50px 70px 50px 70px;
+    }
+    
+    #side ul li{
+        margin-top:10px;
+    }
+    
+    #side ul li a{
+        padding-bottom:5px;
+        border-right: 2px solid rgba(0,0,0,0);
+    }
+
+    #side ul a{
+        text-decoration: none;
+        color:white;
+        display:block;
+        text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+    }
+
+    #side ul .current-menu-item a{
+        background-color:rgba(0,0,0,0.08);
+        border-right: 2px solid #88c057;
+    }
 }
 
-.navbar {
-    margin-bottom: 20px;
+
+
+@media screen and (max-width:767px){
+    #side{
+        width:100%;
+        height:65px;
+        overflow: hidden;
+    }
+    
+     
+    #side #logo{
+        margin-left:20px;
+        float:left;
+    }
+    
+    #side ul{
+        float:left;
+        
+        
+    }
+    
+    #side ul li{
+        float:left;
+        margin-left:30px;
+        font-size: 0.9em;
+    }
+    
+    #side ul li a{
+        height:62px;
+        display:block;
+        vertical-align:middle;
+        display: table-cell;
+    }
+    
+    #side ul li a{
+        padding-left:5px;
+        padding-right:5px;
+        border-bottom: 3px solid rgba(0,0,0,0);
+    }
+    
+    
+       #side ul .current-menu-item a{
+        border-bottom: 2px solid #88c057;
+    }
+    
+    #side #logo img{
+        height:50px;
+        margin-top: 10px;
+    }
+    
+    #main{
+        height: calc(100% - 65px);
+        padding: 20px 30px 0 30px;
+        box-shadow: inset 0px 5px 5px 0px rgba(0,0,0,0.1);
+    }
+}
+
+@media screen and (max-width:420px){
+      #side ul li{
+        font-size: 0.7em;
+    }
+}
+
+@media screen and (max-width:350px){
+      #side ul li{
+        font-size: 0.4em;
+    }
+}
+    
+#side{
+    background-color: #403D44;
+    color:#A7C5BD;
+    border-right: 1px solid #5D615A;
+}
+
+
+#side ul{
+    font: 1.5em 'Josefin Sans';
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+}
+
+#side ul a{
+    transition:.5s;
+    text-decoration: none;
+    color:white;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+}
+
+#side ul a:hover{
+    text-shadow: 0px 0px 25px rgba(255, 255, 255, 0.9);
+}
+
+#side ul a:focus{
+    color:#88c057;
+}
+
+#main{
+    background-color: #E6E6E6;
+    color:#232020;
+    
+}
+
+#main h1{
+    font-family: Roboto;
+    color:black;
+    font-weight: 300;
+}
+
+.single article date, .blog article date{
+    font: 0.8em Roboto;
+    color:grey;
+    
+}
+
+.page article date{
+    display:none;
+}
+
+article h2{
+    font: 1.8em Roboto;
+    font-weight: 300;
+    margin:10px 0 0 0;
+}
+
+article h2 a{
+    text-decoration: none;
+    color:#CF4647;
+    margin:0;
+}
+
+
+
+article{
+    font-family: Roboto;
+    margin:5px 0 30px 0;
+    
+}
+
+
+article a{
+    text-decoration: none;
+    color:#CF4647;
+}
+
+article img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
 }

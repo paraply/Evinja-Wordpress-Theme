@@ -1,12 +1,11 @@
 <?php get_header(); ?>
     
-<div class="container">
-     <div class="blog-main">
+<div id="main">
             <?php if ( have_posts() ) : 
                 while ( have_posts() ) : the_post(); ?> <!-- loop through the posts -->
                     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                         <div class="post-header">
-                            <date><?php the_time('M j y'); ?></date>
+                            <date><?php the_time('j F Y'); ?></date>
                             <h2 class="blog-post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                         </div> <!-- .post-header -->
                         
@@ -25,8 +24,7 @@
                 
                 <?php endif; ?>
             
-    </div> <!-- .blog-main -->
-</div> <!-- .container -->
+</div> <!-- #main -->
             
 <?php get_footer(); ?>
 

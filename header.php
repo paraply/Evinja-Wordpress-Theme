@@ -1,39 +1,22 @@
 <!DOCTYPE html>
-    <head>
+<html>    
+<head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-        <link rel="stylesheet" href="style.css" type="text/css"/>
-        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" />
         <title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
-        <link rel="stylesheet" href="<?php bloginfo('stylesheet_url') ?>">
-                
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <link rel="icon"
+              type="image/png"
+              href="<?php bloginfo('template_url'); ?>/favicon.png">
+        <?php wp_head()?>
     </head>
-<body <?php body_class(); ?>>
+    <body <?php body_class(); ?>>
+        <div id="top"></div>
+        <div id="side">
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" id="logo"><img src="<?php bloginfo('template_url'); ?>/logo.png" alt="&#9730;" /></a>
+            <ul>
+            <?php wp_nav_menu(); ?>
+            </ul>
+        </div>
 
     
-            <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="http://evinja.se">evinja</a> 
-                    
-                </div>
-                    <div id="navbar" class="navbar-collapse collapse">
-                      <ul class="nav navbar-nav">
-                        <?php wp_list_pages(array('title_li' => '')); ?>
-                      </ul>
-                    </div><!--/.nav-collapse -->
-          
-            </div><!-- .container-fluid -->
-            
-
-        </nav><!-- navbar navbar-default --> 
