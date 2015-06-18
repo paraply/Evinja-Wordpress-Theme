@@ -11,7 +11,7 @@ Version: 0.1
 html,body{
     padding: 0;
     margin: 0;
-     background-color: #E6E6E6;
+    background-color: #E6E6E6;
 }
 
 ::selection {
@@ -29,7 +29,7 @@ html,body{
           background-color: #75a64b;
           height: 10px;
           box-shadow: 0px 0px 10px rgba(0,0,0,.4);
-}
+    }
 
     #side{
         padding-top:45px;
@@ -66,13 +66,12 @@ html,body{
         background-color:rgba(0,0,0,0.08);
         border-right: 2px solid #88c057;
     }
-}
+} /* width >= 768px */
 
 
 
 @media screen and (max-width:767px){
     #side{
-        width:100%;
         height:65px;
         overflow: hidden;
     }
@@ -123,19 +122,19 @@ html,body{
         padding: 20px 30px 0 30px;
         box-shadow: inset 0px 5px 5px 0px rgba(0,0,0,0.1);
     }
-}
+}  /* width <= 767px */
 
 @media screen and (max-width:420px){
       #side ul li{
         font-size: 0.7em;
     }
-}
+} /* width <= 420px */
 
 @media screen and (max-width:350px){
       #side ul li{
         font-size: 0.4em;
     }
-}
+} /* width <= 350px */
     
 #side{
     background-color: #403D44;
@@ -214,7 +213,71 @@ article a{
     color:#CF4647;
 }
 
-article img {
+
+article .wp-caption{
+    border:1px solid #403D44;
+    padding:10px;
+    background-color: rgba(255,255,255,0.3);
+    text-align: center;
+}
+
+/*--------------------------------------------------------------
+Galleries and images
+--------------------------------------------------------------*/
+
+
+.size-auto, 
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+	max-width: 100%;
+	height: auto;
+}
+
+img {
 	height: auto; /* Make sure images are scaled correctly. */
 	max-width: 100%; /* Adhere to container width. */
 }
+
+
+.inlaggsinnehall .tiled-gallery{
+    margin: 0; //ingen margin under tiled gallery
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+
+.gallery-item dt{
+    padding:10px;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+.gallery-caption {}
