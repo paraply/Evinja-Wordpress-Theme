@@ -240,11 +240,6 @@ img {
 	max-width: 100%; /* Adhere to container width. */
 }
 
-
-.inlaggsinnehall .tiled-gallery{
-    margin: 0; //ingen margin under tiled gallery
-}
-
 .gallery-item {
 	display: inline-block;
 	text-align: center;
