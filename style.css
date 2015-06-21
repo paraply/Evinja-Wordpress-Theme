@@ -7,15 +7,18 @@ Author URI: http://evinja.se
 Version: 0.1
 */
 @import url(http://fonts.googleapis.com/css?family=Josefin+Sans:300|Roboto:300);
-
 html,body{
     padding: 0;
     margin: 0;
-    background-color: #E6E6E6;
 }
 
 ::selection {
   background: #75A64B;
+}
+
+#main a:hover{
+    color:#872d2d;
+    transition: color 1.3s; 
 }
 
 
@@ -43,6 +46,7 @@ html,body{
     #main{
         float:right;
         width: calc(100% - 421px); 
+        
         padding:50px 70px 50px 70px;
     }
     
@@ -165,11 +169,6 @@ html,body{
     color:#88c057;
 }
 
-#main{
-    background-color: #E6E6E6;
-    color:#232020;
-    
-}
 
 #main h1{
     font-family: Roboto;
@@ -208,7 +207,7 @@ article{
 }
 
 
-article a{
+article a, #about a{
     text-decoration: none;
     color:#CF4647;
 }
@@ -220,6 +219,95 @@ article .wp-caption{
     background-color: rgba(255,255,255,0.3);
     text-align: center;
 }
+
+
+ .blog{ /* .blog is the body class. */
+    background-color: #E6E6E6;
+    color:#232020;
+}
+
+
+.page{ /* Use a different background color for custom pages */
+background-color: #0a120c;
+background-image: url(http://www.transparenttextures.com/patterns/skulls.png);
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+
+
+/*-------------------------------------------------------------
+About page
+--------------------------------------------------------------*/
+
+#about{
+    border:1px solid black;
+    background-color: rgba(255,255,255,0.85);
+    padding:30px;
+    box-shadow:2px 2px 7px 0 rgba(0, 0, 0, 0.4);
+    font: 1em Roboto;
+    max-width: 800px;
+    margin:0 auto;
+}
+
+#about h1{
+    font: 3em 'Josefin Sans';
+    letter-spacing: 2px;
+}
+
+#contact-title{
+    font-size:1.3em;
+    margin-bottom:5px;
+    font-weight: 300;
+    font-variant: small-caps;
+    letter-spacing: 2px;
+}
+
+#contact{
+    font-size: 1.2em;
+    border-top:1px dotted grey;
+    padding-top:5px;
+    clear:both;
+    overflow:auto;
+}
+
+.contact-option:first-child{
+    clear:left;
+}
+.contact-option:last-child{
+    clear:right;
+}
+
+
+.contact-option{
+    float:left;
+    padding: 8px;
+    height:40px;
+}
+
+.contact-option:hover .fa{
+    background-color: #75a64b;
+    transition: background-color 2s; 
+}
+
+.contact-option:hover .contact-text{
+    color:#75a64b;
+    transition: color 2s; 
+}
+
+
+
+.fa{
+    display: inline-block;
+    border-radius: 50%;
+    padding:10px;
+    margin-right: 5px;
+    color:white;
+    background-color:#524656;
+    box-shadow: 0px 0px 2px #3a323d;
+}
+
+
+
 
 /*--------------------------------------------------------------
 Galleries and images
@@ -249,6 +337,14 @@ img {
 
 .gallery-item dt{
     padding:10px;
+}
+
+.gallery-item dt img{
+    box-shadow:1px 1px 5px 0px rgba(50, 50, 50, 0.2);
+}
+
+.gallery-item a {
+    border-style: none;
 }
 
 .gallery-columns-2 .gallery-item {

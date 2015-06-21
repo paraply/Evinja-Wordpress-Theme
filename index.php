@@ -19,7 +19,7 @@
                 
                 <?php else : ?>
                     <article>
-                    <h2><?php _e('No posts found', 'evinja'); ?></h2>
+                    <h2><?php _e('No content found', 'evinja'); ?></h2>
                 </article>
                 <?php endif; ?>
             
