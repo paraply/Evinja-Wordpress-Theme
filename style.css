@@ -13,7 +13,7 @@ html,body{
 }
 
 ::selection {
-  background: #75A64B;
+    background: #75A64B;
 }
 
 #main a:hover{
@@ -22,16 +22,19 @@ html,body{
 }
 
 
+
+
+
 @media screen and (min-width:768px){
     body:before {
-          content: "";
-          position: fixed;
-          top: -5px;
-          left: 0;
-          width: 100%;
-          background-color: #75a64b;
-          height: 10px;
-          box-shadow: 0px 0px 10px rgba(0,0,0,.4);
+        content: "";
+        position: fixed;
+        top: -5px;
+        left: 0;
+        width: 100%;
+        background-color: #75a64b;
+        height: 10px;
+        box-shadow: 0px 0px 10px rgba(0,0,0,.4);
     }
 
     #side{
@@ -42,18 +45,17 @@ html,body{
         text-align: center;
         z-index: -1;
     }
-    
+
     #main{
         float:right;
         width: calc(100% - 421px); 
-        
         padding:50px 70px 50px 70px;
     }
-    
+
     #side ul li{
         margin-top:10px;
     }
-    
+
     #side ul li a{
         padding-bottom:5px;
         border-right: 2px solid rgba(0,0,0,0);
@@ -70,8 +72,17 @@ html,body{
         background-color:rgba(0,0,0,0.08);
         border-right: 2px solid #88c057;
     }
+    
+    
 } /* width >= 768px */
 
+@media screen and (min-width:1400px){
+
+    article{
+        margin: 0 auto;
+        max-width: 1000px;
+    }
+}
 
 
 @media screen and (max-width:767px){
@@ -79,48 +90,48 @@ html,body{
         height:65px;
         overflow: hidden;
     }
-    
-     
+
+
     #side #logo{
         margin-left:20px;
         float:left;
     }
-    
+
     #side ul{
         float:left;
-        
-        
+
+
     }
-    
+
     #side ul li{
         float:left;
         margin-left:30px;
         font-size: 0.9em;
     }
-    
+
     #side ul li a{
         height:62px;
         display:block;
         vertical-align:middle;
         display: table-cell;
     }
-    
+
     #side ul li a{
         padding-left:5px;
         padding-right:5px;
         border-bottom: 3px solid rgba(0,0,0,0);
     }
-    
-    
-       #side ul .current-menu-item a{
+
+
+    #side ul .current-menu-item a{
         border-bottom: 2px solid #88c057;
     }
-    
+
     #side #logo img{
         height:50px;
         margin-top: 10px;
     }
-    
+
     #main{
         height: calc(100% - 65px);
         padding: 20px 30px 0 30px;
@@ -129,17 +140,17 @@ html,body{
 }  /* width <= 767px */
 
 @media screen and (max-width:420px){
-      #side ul li{
+    #side ul li{
         font-size: 0.7em;
     }
 } /* width <= 420px */
 
 @media screen and (max-width:350px){
-      #side ul li{
+    #side ul li{
         font-size: 0.4em;
     }
 } /* width <= 350px */
-    
+
 #side{
     background-color: #403D44;
     color:#A7C5BD;
@@ -147,7 +158,7 @@ html,body{
 }
 
 
-#side ul{
+#side ul, .sub-menu{
     font: 1.5em 'Josefin Sans';
     list-style-type: none;
     margin: 0 auto;
@@ -176,10 +187,27 @@ html,body{
     font-weight: 300;
 }
 
-.single article date, .blog article date{
+date{
     font: 0.8em Roboto;
-    color:grey;
-    
+    color: rgba(50, 50, 50, 0.6);
+}
+
+#tags{
+    font: 0.8em Roboto;
+    color: rgba(50, 50, 50, 0.6);
+    float:right;
+    top:0;
+}
+
+
+#tags .fa{
+    margin-right: 5px;
+}
+
+
+#tags p{
+    margin:0;
+    padding:0;
 }
 
 .page article date{
@@ -189,21 +217,19 @@ html,body{
 article h2{
     font: 1.8em Roboto;
     font-weight: 300;
-    margin:10px 0 0 0;
+    margin:10px 0 10px 0;
 }
 
 article h2 a{
     text-decoration: none;
     color:#CF4647;
-    margin:0;
 }
 
 
 
 article{
     font-family: Roboto;
-    margin:5px 0 30px 0;
-    
+    padding-bottom:40px;
 }
 
 
@@ -214,23 +240,24 @@ article a, #about a{
 
 
 article .wp-caption{
-    border:1px solid #403D44;
-    padding:10px;
-    background-color: rgba(255,255,255,0.3);
     text-align: center;
 }
 
+article .wp-caption img{
+    box-shadow:1px 1px 5px 0px rgba(50, 50, 50, 0.5); 
+}
 
- .blog{ /* .blog is the body class. */
+
+.blog, .single{ /* .blog is the body class. */
     background-color: #E6E6E6;
     color:#232020;
 }
 
 
 .page{ /* Use a different background color for custom pages */
-background-color: #0a120c;
-background-image: url(http://www.transparenttextures.com/patterns/skulls.png);
-/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    background-color: #0a120c;
+    background-image: url(http://www.transparenttextures.com/patterns/skulls.png);
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
 
@@ -263,7 +290,7 @@ About page
 }
 
 #contact{
-    font-size: 1.2em;
+    font-size: 0.95em;
     border-top:1px dotted grey;
     padding-top:5px;
     clear:both;
@@ -277,11 +304,34 @@ About page
     clear:right;
 }
 
+a.info{
+    position:relative; /*this is the key*/
+    z-index:24; 
+}
+
+a.info:hover{
+    z-index:25; 
+}
+
+a.info span{display: none}
+
+a.info:hover span{ /*the span will display just on :hover state*/
+    display:block;
+    position:absolute;
+    left:-150px;
+    top:-150px;
+    width:300px;
+    height:300px;
+    border:2px solid rgba(82,70,60,0.8);
+    background-color:rgba(82,70,60,0.4); 
+    box-shadow:1px 1px 5px 0px rgba(50, 50, 50, 0.5);        
+}
 
 .contact-option{
     float:left;
-    padding: 8px;
     height:40px;
+    width:200px;
+    margin-top:5px;
 }
 
 .contact-option:hover .fa{
@@ -296,17 +346,30 @@ About page
 
 
 
-.fa{
+#about .fa{
     display: inline-block;
     border-radius: 50%;
-    padding:10px;
-    margin-right: 5px;
+    padding: 8px 6px 8px 6px;
+    margin-right: 10px;
     color:white;
     background-color:#524656;
     box-shadow: 0px 0px 2px #3a323d;
 }
 
+.working-list li , .working-list li {
+    padding: 0;
+    margin-top: 5px;
+    list-style: none;
+}
 
+.working-list li:before {
+    content: '\f0da';
+    font-family: 'FontAwesome';
+    float: left;
+    margin-left: -1.5em;
+    margin-top:1px;
+    color: #75a64b;
+}
 
 
 /*--------------------------------------------------------------
@@ -319,28 +382,31 @@ Galleries and images
 .size-large,
 .size-medium,
 .size-thumbnail {
-	max-width: 100%;
-	height: auto;
+    max-width: 100%;
+    height: auto;
 }
 
 img {
-	height: auto; /* Make sure images are scaled correctly. */
-	max-width: 100%; /* Adhere to container width. */
+    height: auto; /* Make sure images are scaled correctly. */
+    max-width: 100%; /* Adhere to container width. */
 }
 
 .gallery-item {
-	display: inline-block;
-	text-align: center;
-	vertical-align: top;
-	width: 100%;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    width: 100%;
+
 }
 
 .gallery-item dt{
     padding:10px;
+
 }
 
-.gallery-item dt img{
+.gallery-item dt img {
     box-shadow:1px 1px 5px 0px rgba(50, 50, 50, 0.2);
+    border:1px solid red;
 }
 
 .gallery-item a {
@@ -348,27 +414,27 @@ img {
 }
 
 .gallery-columns-2 .gallery-item {
-	max-width: 50%;
+    max-width: 50%;
 }
 .gallery-columns-3 .gallery-item {
-	max-width: 33.33%;
+    max-width: 33.33%;
 }
 .gallery-columns-4 .gallery-item {
-	max-width: 25%;
+    max-width: 25%;
 }
 .gallery-columns-5 .gallery-item {
-	max-width: 20%;
+    max-width: 20%;
 }
 .gallery-columns-6 .gallery-item {
-	max-width: 16.66%;
+    max-width: 16.66%;
 }
 .gallery-columns-7 .gallery-item {
-	max-width: 14.28%;
+    max-width: 14.28%;
 }
 .gallery-columns-8 .gallery-item {
-	max-width: 12.5%;
+    max-width: 12.5%;
 }
 .gallery-columns-9 .gallery-item {
-	max-width: 11.11%;
+    max-width: 11.11%;
 }
 .gallery-caption {}

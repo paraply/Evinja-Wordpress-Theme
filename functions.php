@@ -1,5 +1,13 @@
 <?php
 
+if ( ! isset( $content_width ) ) {
+	$content_width = 1000; // Size in pixels. If not set the JetPack tiled galleries will be too small
+}
+
+add_filter( 'use_default_gallery_style', '__return_false' ); // We do not want wordpress to style our galleries
+
+
+
 //Setup and register support
 function evinja_setup() {
     	add_theme_support( 'post-thumbnails' );

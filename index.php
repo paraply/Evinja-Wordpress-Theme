@@ -5,7 +5,9 @@
                 while ( have_posts() ) : the_post(); ?> <!-- loop through the posts -->
                     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                         <div class="post-header">
+                             <span id="tags"><?php echo get_the_tag_list('<p><i class="fa fa-tags"></i> ',', ','</p>');?></span>
                             <date><?php the_time('j F Y'); ?></date>
+                            
                             <h2 class="blog-post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                         </div> <!-- .post-header -->
                         
@@ -22,7 +24,6 @@
                     <h2><?php _e('No content found', 'evinja'); ?></h2>
                 </article>
                 <?php endif; ?>
-            
 </div> <!-- #main -->
             
 <?php get_footer(); ?>
