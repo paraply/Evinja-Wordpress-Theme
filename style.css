@@ -88,7 +88,6 @@ html,body{
 @media screen and (max-width:767px){
     #side{
         height:65px;
-        overflow: hidden;
     }
 
 
@@ -139,13 +138,15 @@ html,body{
     }
 }  /* width <= 767px */
 
-@media screen and (max-width:420px){
+@media screen and (max-width:510px){
     #side ul li{
-        font-size: 0.7em;
+        font-size: 0.6em;
+        margin-left: 10px;
     }
+    
 } /* width <= 420px */
 
-@media screen and (max-width:350px){
+@media screen and (max-width:370px){
     #side ul li{
         font-size: 0.4em;
     }
@@ -375,6 +376,14 @@ a.info:hover span{ /*the span will display just on :hover state*/
 /*--------------------------------------------------------------
 Galleries and images
 --------------------------------------------------------------*/
+.aligncenter, img.aligncenter { 
+    clear: both; 
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto; 
+    border:1px solid rgba(0,0,0,0.3);
+    box-shadow:1px 1px 5px 0px rgba(50, 50, 50, 0.3); 
+}
 
 
 .size-auto, 
